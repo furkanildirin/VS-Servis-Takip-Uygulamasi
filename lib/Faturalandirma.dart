@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'PdfServiceFatura.dart'; // PdfServiceFatura sınıfını import edin
+import 'PdfServiceFatura.dart'; 
 
 class FaturalandirmaSayfasi extends StatefulWidget {
   final double totalFee;
