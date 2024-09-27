@@ -14,7 +14,7 @@ class _ImportExcelPageState extends State<ImportExcelPage> {
 
   Future<void> _importFromExcel() async {
     try {
-      // Dosya seçiciyle excel dosyasını seçme
+      
       FilePickerResult? result = await FilePicker.platform.pickFiles(
         type: FileType.custom,
         allowedExtensions: ['xlsx'],
@@ -27,7 +27,7 @@ class _ImportExcelPageState extends State<ImportExcelPage> {
 
         final dbHelper = DBHelper();
 
-        // Excel dosyasındaki her satırı oku ve veritabanına ekle
+      
         for (var table in excel.tables.keys) {
           for (var row in excel.tables[table]!.rows.skip(1)) {
             String id = row[0] != null ? row[0]!.value.toString() : '';
@@ -52,7 +52,7 @@ class _ImportExcelPageState extends State<ImportExcelPage> {
             String isExternalService = row[19] != null ? row[19]!.value.toString() : 'No';
             String isCompleted = row[20] != null ? row[20]!.value.toString() : 'No';
 
-            // Veritabanına ekle
+            
             await dbHelper.insertDevice({
               'id': id,
               'dealershipName': dealershipName,
