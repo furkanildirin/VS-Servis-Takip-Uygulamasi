@@ -1,10 +1,10 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'CihazGuncellemeSayfasi.dart';
-import 'FullEkranResim.dart'; // Full screen image page
-import 'PdfService.dart'; // PdfService sınıfını import edin
-import 'DBHelper.dart'; // DBHelper sınıfını import edin
-import 'Faturalandirma.dart'; // Faturalandırma sayfasını import edin
+import 'FullEkranResim.dart'; 
+import 'PdfService.dart'; 
+import 'DBHelper.dart'; 
+import 'Faturalandirma.dart'; 
 
 class CihazDetaySayfasi extends StatelessWidget {
   final Map<String, dynamic> device;
@@ -27,7 +27,7 @@ class CihazDetaySayfasi extends StatelessWidget {
         padding: const EdgeInsets.all(12.0),
         child: Column(
           children: [
-            // Bölümlendirilmiş içerik
+            
             Expanded(
               child: ListView(
                 children: [
